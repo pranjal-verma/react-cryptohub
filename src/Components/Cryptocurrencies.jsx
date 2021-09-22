@@ -33,12 +33,14 @@ const Cryptocurrencies = ({ simplified }) => {
 
   return (
     <>
-      <div className="search-crypto">
-        <Input
-          placeholder="search coins"
-          onChange={_.debounce((e) => setsearchTerm(e.target.value), 400)}
-        />
-      </div>
+      {simplified ? null : (
+        <div className="search-crypto">
+          <Input
+            placeholder="search coins"
+            onChange={_.debounce((e) => setsearchTerm(e.target.value), 400)}
+          />
+        </div>
+      )}
       <Row className="crypto-card-container" gutter={[32, 32]}>
         {Array.isArray(coins)
           ? coins.slice(0, count).map((currency) => {

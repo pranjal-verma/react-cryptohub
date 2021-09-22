@@ -3,8 +3,9 @@ import millify from "millify";
 import { Statistic, Row, Col, Typography } from "antd";
 import { Link } from "react-router-dom";
 import Cryptocurrencies from "./Cryptocurrencies";
-
+import News from "./News";
 import { useGetCryptosQuery } from "../services/cryptoApi";
+
 const { Title } = Typography;
 const HomePage = () => {
   const { data, isFetching } = useGetCryptosQuery(10);
@@ -76,6 +77,8 @@ const HomePage = () => {
           <Link to="/news">Show more</Link>
         </Title>
       </div>
+
+      <News />
     </>
   );
 };

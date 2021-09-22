@@ -33,7 +33,7 @@ const App = () => {
                 <Cryptocurrencies />
               </Route>
 
-              <Route exact path="/crypto:id">
+              <Route path="/crypto/:id">
                 <CryptoDetail />
               </Route>
 
@@ -49,7 +49,7 @@ const App = () => {
             level={5}
             style={{ color: "white", textAlign: "center" }}
           >
-            CryptoVerse <br />
+            CryptoHub <br />
             All rights reserved
           </Typography.Title>
         </div>
